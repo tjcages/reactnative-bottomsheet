@@ -12,17 +12,19 @@ import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
 ...
 
-<Stack.Group
-  screenOptions={{
-    presentation: "modal",
-    cardStyle: {
-      backgroundColor: "transparent",
-    },
-  }}
->
-  <Stack.Screen name="HomeTabs" component={HomeTabs} />
-  <Stack.Screen name="ModalScreen" component={ModalScreen} />
-</Stack.Group>
+return (
+  <Stack.Group
+    screenOptions={{
+      presentation: "modal",
+      cardStyle: {
+        backgroundColor: "transparent",
+      },
+    }}
+  >
+    <Stack.Screen name="HomeTabs" component={HomeTabs} />
+    <Stack.Screen name="ModalScreen" component={ModalScreen} />
+  </Stack.Group>
+)
 ```
 
 Use like:
