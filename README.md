@@ -1,6 +1,30 @@
 # reactnative-bottomsheet
 An iOS-esque bottom sheet navigation component
 
+
+Needs to be paired with react-navigation.
+```
+npm install @react-navigation/native
+```
+```
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
+...
+
+<Stack.Group
+  screenOptions={{
+    presentation: "modal",
+    cardStyle: {
+      backgroundColor: "transparent",
+    },
+  }}
+>
+  <Stack.Screen name="HomeTabs" component={HomeTabs} />
+  <Stack.Screen name="ModalScreen" component={ModalScreen} />
+</Stack.Group>
+```
+
 Use like:
 ```
 <BottomSheet style={styles.bottomSheet} onPress={() => props.navigation.pop(1)}>
